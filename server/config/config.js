@@ -11,7 +11,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/kanda';
 } else {
-    urlDB = 'mongodb+srv://kanda:7bPwgn6AVfMNPfzh@cluster0.7nag6.mongodb.net/kanda'
+    urlDB = process.env.MONGO_URL;
 }
 
 process.env.URLDB = urlDB;
