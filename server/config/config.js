@@ -1,8 +1,13 @@
 process.env.PORT = process.env.PORT || 3000;
 
 // ENTORNO  
-
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
+
+//VENCIMIENTO DEL TOKEN
+process.env.VEN_TOKEN = 60 * 60 * 24 * 30;
+
+//SEED
+process.env.SEED = process.env.SEED || 'secreto_desarrollo';
 
 //BASE DE DATOS
 
