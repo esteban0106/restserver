@@ -27,7 +27,7 @@ let usuarioSchema = new Schema({
     }, // no es obligatoria
     role: {
         type: String,
-        required: 'USER_ROLE',
+        default: 'USER_ROLE',
         enum: rolesValidos
     }, // default: 'USER_ROLE'
     estado: {
