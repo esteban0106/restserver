@@ -80,7 +80,7 @@ app.post('/google', async(req, res) => {
         .catch(e => {
             return res.status(403).json({
                 ok: false,
-                err
+                err: e
             });
         });
 
@@ -89,7 +89,9 @@ app.post('/google', async(req, res) => {
         if (err) {
             return res.status(500).json({
                 ok: false,
-                err
+                err: {
+                    message: 'login.js line 95'
+                }
             });
         };
 
