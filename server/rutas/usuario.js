@@ -34,7 +34,8 @@ app.get('/usuario', (req, res) => {
         })
 });
 
-app.post('/usuario', [verificaToken, verificaRole], (req, res) => {
+//app.post('/usuario', [verificaToken, verificaRole], (req, res) => {
+app.post('/usuario', (req, res) => {
     let body = req.body;
 
     let usuario = new Usuario({
@@ -50,7 +51,9 @@ app.post('/usuario', [verificaToken, verificaRole], (req, res) => {
         if (err) {
             return res.status(400).json({
                 ok: false,
-                err
+                err: {
+                    message: 'something is bad'
+                }
             });
         }
 
